@@ -1,1 +1,11 @@
-data/raw/stop_times.txt
+/data/raw/agency.txt
+/data/raw/calendar.txt
+/data/raw/calendar_dates.txt
+/data/raw/routes.txt
+/data/raw/stop_times.txt
+/data/raw/stop_extensions.txt
+/data/raw/transfers.txt
+/data/raw/stops.txt
+/data/raw/trips.txt
+/data/raw/pathways.txt
+data/.DS_Store
