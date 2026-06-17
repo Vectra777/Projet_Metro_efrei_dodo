@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Métro, Efrei, Dodo</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="panel">
+        <header class="brand">
+          <h1>Métro, Efrei, Dodo</h1>
+        </header>
+
+        <section class="controls" aria-label="Recherche d'itinéraire">
+          <label>
+            <span>Départ</span>
+            <select id="fromStation"></select>
+          </label>
+          <label>
+            <span>Arrivée</span>
+            <select id="toStation"></select>
+          </label>
+          <div class="time-grid">
+            <label>
+              <span>Date</span>
+              <input id="travelDate" type="date">
+            </label>
+            <label>
+              <span>Heure</span>
+              <input id="travelTime" type="time" value="08:00">
+            </label>
+          </div>
+          <div class="button-row">
+            <button id="searchBtn" class="primary" type="button">Rechercher</button>
+            <button id="resetViewBtn" type="button" title="Recentrer la carte">⌂</button>
+          </div>
+          <p id="pickHint" class="pick-hint">Clique sur une station pour choisir le départ, puis clique une autre station pour lancer le trajet.</p>
+        </section>
+
+        <section class="tools" aria-label="Outils graphe">
+          <button id="connectivityBtn" type="button">Tester si tout le réseau est relié</button>
+          <label class="toggle">
+            <input id="mstToggle" type="checkbox">
+            <span>Afficher l'arbre couvrant</span>
+          </label>
+          <button id="playMstBtn" type="button">Animer l'arbre couvrant</button>
+        </section>
+
+        <section class="summary" aria-live="polite">
+          <div id="connectivityResult" class="notice"></div>
+          <div id="mstResult" class="notice"></div>
+          <div id="routeResult" class="route-result"></div>
+        </section>
+      </aside>
+
+      <section class="map-wrap">
+        <canvas id="networkCanvas" aria-label="Plan interactif métro et RER"></canvas>
+        <div id="stationTooltip" class="station-tooltip"></div>
+        <div class="legend" id="legend"></div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

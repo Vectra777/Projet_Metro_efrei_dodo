@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+data/raw/gtfs-idfm-2024/stop_times.txt
